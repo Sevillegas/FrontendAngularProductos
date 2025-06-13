@@ -1,0 +1,30 @@
+:host ::ng-deep .card-custom {
+  background-color: #212529; /* similar al bg-dark de Bootstrap */
+  color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
+
+:host ::ng-deep .card-custom:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+:host ::ng-deep .btn-custom {
+  background-color: #00bcd4;
+  color: white;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+:host ::ng-deep .btn-custom:hover {
+  background-color: #0097a7;
+}
+
+:host ::ng-deep .text-price {
+  color: #00e676;
+}
+

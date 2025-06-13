@@ -1,0 +1,16 @@
+:host ::ng-deep .carousel-inner {
+  max-height: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+:host ::ng-deep .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 800px;
+}
+
+:host ::ng-deep .carousel {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}

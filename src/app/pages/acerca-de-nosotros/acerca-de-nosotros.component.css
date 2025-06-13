@@ -1,0 +1,12 @@
+:host {
+  background-color: #5f6368;
+  min-height: 100vh;
+  display: block;
+  padding-top: 50px;
+}
+
+.card-custom {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}

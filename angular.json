@@ -22,10 +22,19 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
               "src/styles.css"
+
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -88,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f524ed5c-f252-47bb-83c4-17e5d0bd9795"
   }
 }

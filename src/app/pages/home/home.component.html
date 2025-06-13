@@ -1,0 +1,29 @@
+<app-carrusel></app-carrusel>
+
+<!-- Sección de bienvenida con fondo oscuro -->
+<div class="bg-dark text-light py-5 mt-3">
+  <div class="container text-center">
+    <h2>Bienvenido a la TechStore</h2>
+    <p>Vende tus productos con nosotros. ¡Es fácil y rápido!</p>
+    <a routerLink="/productos" class="btn btn-custom btn-lg mt-3">Vende tu Producto</a>
+  </div>
+</div>
+
+<!-- Sección de productos destacados -->
+<div class="container mt-4">
+  <div class="py-4">
+    <h3 class="mb-4 text-center">Productos Destacados</h3>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let product of productosFiltrados; let i = index">
+        <app-product-card [product]="product" [imagenUrl]="'assets/images/image' + (i+4) + '.png'"></app-product-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

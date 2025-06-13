@@ -1,0 +1,15 @@
+<div class="card h-100 shadow-sm border-0 card-custom">
+  <img [src]="imagenUrl" class="card-img-top rounded mb-3" alt="Imagen del producto">
+
+
+  <div class="card-body text-center">
+    <h5 class="card-title">{{ product.nombre }}</h5>
+    <p class="card-text">{{ product.descripcion }}</p>
+    <p class="fw-bold fs-5 text-price">$ {{ product.precio }}</p>
+    <p><span class="badge bg-secondary">Stock: {{ product.stock }}</span></p>
+    <button class="btn btn-custom mt-2">Ver Detalles</button>
+  </div>
+</div>
+
+
+

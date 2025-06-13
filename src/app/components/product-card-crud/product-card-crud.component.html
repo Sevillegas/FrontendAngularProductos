@@ -1,0 +1,16 @@
+<div class="card h-100 shadow-sm border-0 card-custom text-white text-center p-3">
+<img [src]="'assets/images/image' + (index + 4) + '.png'" class="card-img-top rounded mb-3" alt="Imagen del producto">
+
+
+
+  <h5 class="fw-bold">{{ producto.nombre }}</h5>
+  <p>{{ producto.descripcion }}</p>
+  <p class="fw-bold fs-4 text-success">$ {{ producto.precio }}</p>
+  <span class="badge bg-secondary">Stock: {{ producto.stock }}</span>
+
+  <div class="mt-3 d-flex justify-content-center gap-2">
+    <button class="btn btn-primary" (click)="onEditar()">Editar</button>
+    <button class="btn btn-danger" (click)="onEliminar()">Eliminar</button>
+  </div>
+</div>
+

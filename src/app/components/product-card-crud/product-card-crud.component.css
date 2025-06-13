@@ -1,0 +1,19 @@
+.card-custom {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-custom:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}

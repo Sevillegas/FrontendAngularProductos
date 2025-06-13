@@ -1,0 +1,61 @@
+<div class="container">
+  <h1 class="text-center my-4">Gestionar Productos</h1>
+
+  <app-product-form (onSubmit)="guardarProducto($event)"></app-product-form>
+
+  <hr>
+
+  <div class="row justify-content-center">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let producto of productos; let i = index">
+    <app-product-card-crud
+      [producto]="producto"
+      [index]="i"
+      (editar)="abrirEdicionPorId($event)"
+      (eliminar)="eliminarProducto(producto._id)">
+    </app-product-card-crud>
+  </div>
+</div>
+
+
+
+<!-- Modal de edición -->
+<div *ngIf="productoEnEdicion" class="modal-overlay">
+  <div class="modal-content">
+
+    <h3 class="mb-4 text-center">Editar Producto</h3>
+
+    <form (ngSubmit)="actualizarProducto()" class="mx-auto" style="max-width: 400px;">
+
+      <div class="mb-3">
+        <label class="form-label">Nombre:</label>
+        <input [(ngModel)]="productoEnEdicion.nombre" name="nombre" required class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Descripcion:</label>
+        <textarea [(ngModel)]="productoEnEdicion.descripcion" name="descripcion" required class="form-control"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Precio:</label>
+        <input type="number" [(ngModel)]="productoEnEdicion.precio" name="precio" required min="0" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Stock:</label>
+        <input type="number" [(ngModel)]="productoEnEdicion.stock" name="stock" required min="0" class="form-control" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Categoria:</label>
+        <input [(ngModel)]="productoEnEdicion.categoria" name="categoria" required class="form-control" />
+      </div>
+
+      <div class="d-flex justify-content-end gap-2">
+        <button type="submit" class="btn btn-success px-4">Guardar</button>
+        <button type="button" (click)="cerrarEdicion()" class="btn btn-danger px-4">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+</div>
