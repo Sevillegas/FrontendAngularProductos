@@ -11,7 +11,7 @@
       [producto]="producto"
       [index]="i"
       (editar)="abrirEdicionPorId($event)"
-      (eliminar)="eliminarProducto(producto._id)">
+      (eliminar)="producto._id && eliminarProducto(producto._id)">
     </app-product-card-crud>
   </div>
 </div>
